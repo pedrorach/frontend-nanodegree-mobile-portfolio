@@ -29,15 +29,19 @@ form {
   font-weight: 800;
 }
 
+/* OPTIMIZATION: ADD backface-visibility or will-change to stimulate layer creation */
 .mover {
   position: fixed;
   width: 256px;
   z-index: -1;
+  backface-visibility: hidden;
+  /*will-change: transform;*/
 }
 
 .randomPizzaContainer {
   float: left;
   display: flex;
+
 }
 
 .randomPizzaContainer:after {
